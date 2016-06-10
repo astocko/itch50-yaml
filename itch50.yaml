@@ -181,594 +181,594 @@ fields:
         - Z: Not Applicable
 
   - Authenticity:
-    type: alpha
-    astype: bool
-    length: 1
-    enum:
-      - P: Live/Production
-        variant: true
-      - T: Test
-        variant: false
+      type: alpha
+      astype: bool
+      length: 1
+      enum:
+        - P: Live/Production
+          variant: true
+        - T: Test
+          variant: false
 
   - ShortSaleThresholdIndicator:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - Y: Issue is restricted under SEC Rule 203(b)(3)
-        variant: Restricted
-      - N: Issue is not restricted
-        variant: NotRestricted
-      - ' ': Threshold indicator is not available
-        variant: NotAvailable
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - Y: Issue is restricted under SEC Rule 203(b)(3)
+          variant: Restricted
+        - N: Issue is not restricted
+          variant: NotRestricted
+        - ' ': Threshold indicator is not available
+          variant: NotAvailable
 
   - IPOFlag:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - Y: NASDAQ listed instrument is setup as a new IPO security
-        variant: NewIPO
-      - N: NASDAQ listed instrument is not setup as a new IPO security
-        variant: NotNewIPO
-      - ' ': Not available
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - Y: NASDAQ listed instrument is setup as a new IPO security
+          variant: NewIPO
+        - N: NASDAQ listed instrument is not setup as a new IPO security
+          variant: NotNewIPO
+        - ' ': Not available
 
   - LULDReferencePriceTier:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - 1: Tier 1 NMS Stocks and Select ETPs
-        variant: Tier1
-      - 2: Tier 2 NMS Stocks
-        variant: Tier2
-      - ' ': Not applicable
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - 1: Tier 1 NMS Stocks and Select ETPs
+          variant: Tier1
+        - 2: Tier 2 NMS Stocks
+          variant: Tier2
+        - ' ': Not applicable
 
   - ETPFlag:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - Y: Instrument is an ETP
-        variant: ETP
-      - N: Instrument is not an ETP
-        variant: NotETP
-      - ' ': Not available
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - Y: Instrument is an ETP
+          variant: ETP
+        - N: Instrument is not an ETP
+          variant: NotETP
+        - ' ': Not available
 
   - ETPLeverageFactor:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - InverseIndicator:
-    type: alpha
-    astype: bool
-    length: 1
-    enum:
-      - Y: ETP is an inverse ETP
-        variant: true
-      - N: ETP is not an inverse ETP
-        variant: false
+      type: alpha
+      astype: bool
+      length: 1
+      enum:
+        - Y: ETP is an inverse ETP
+          variant: true
+        - N: ETP is not an inverse ETP
+          variant: false
 
   - TradingState:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - H: Halted across all U.S. equity markets/SROs
-        variant: Halted
-      - P: Paused across all US equity markets/SROs (NASDAQ listed only)
-        variant: Paused
-      - Q: Quotation only period for cross-SRO halt or pause
-        variant: QuotationOnly
-      - T: Trading on NASDAQ
-        variant: Trading
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - H: Halted across all U.S. equity markets/SROs
+          variant: Halted
+        - P: Paused across all US equity markets/SROs (NASDAQ listed only)
+          variant: Paused
+        - Q: Quotation only period for cross-SRO halt or pause
+          variant: QuotationOnly
+        - T: Trading on NASDAQ
+          variant: Trading
 
   - Reserved:
-    type: alpha
-    length: 1
-    ignore: true
+      type: alpha
+      length: 1
+      ignore: true
 
   - Reason:
-    type: string
-    astype: enum
-    length: 4
-    usecode: true
-    enum:
-      - T1: Halt News Pending
-      - T2: Halt News Disseminated
-      - T5: Single Security Trading Pause In Effect
-      - T6: Regulatory Halt — Extraordinary Market Activity
-      - T8: Halt ETF
-      - T12: Trading Halted; For Information Requested by Listing Market
-      - H4: Halt Non-Compliance
-      - H9: Halt Filings Not Current
-      - H10: Halt SEC Trading Suspension
-      - H11: Halt Regulatory Concern
-      - O1: Operations Halt; Contact Market Operations
-      - LUDP: Volatility Trading Pause
-      - LUDS: Volatility Trading Pause – Straddle Condition
-      - MWC1: Market Wide Circuit Breaker Halt – Level 1
-      - MWC2: Market Wide Circuit Breaker Halt – Level 2
-      - MWC3: Market Wide Circuit Breaker Halt – Level 3
-      - MWC0: Market Wide Circuit Breaker Halt – Carry over from previous day
-      - IPO1: IPO Issue Not Yet Trading
-      - M1: Corporate Action
-      - M2: Quotation Not Available
-      - Space: Reason Not Available
-      - T3: News and Resumption Times
-      - T7: Single Security Trading Pause / Quotation Only Period
-      - R4: Qualifications Issues Reviewed/Resolved; Quotations/Trading to Resume
-      - R9: Filing Requirements Satisfied/Resolved; Quotations/Trading To Resume
-      - C3: Issuer News Not Forthcoming; Quotations/Trading To Resume
-      - C4: Qualifications Halt ended; Maintenance Requirements Met; Resume
-      - C9: Qualifications Halt Concluded; Filings Met; Quotes/Trades To Resume
-      - C11: Trade Halt Concluded By Other Regulatory Auth.; Quotes/Trades Resume
-      - MWCQ: Market Wide Circuit Breaker Resumption
-      - R1: New Issue Available
-      - R2: Issue Available
-      - IPOQ: IPO Security Released for Quotation (NASDAQ Securities Only)
-      - IPOE: IPO Security — Positioning Window Extension (NASDAQ Securities Only)
+      type: string
+      astype: enum
+      length: 4
+      usecode: true
+      enum:
+        - T1: Halt News Pending
+        - T2: Halt News Disseminated
+        - T5: Single Security Trading Pause In Effect
+        - T6: Regulatory Halt — Extraordinary Market Activity
+        - T8: Halt ETF
+        - T12: Trading Halted; For Information Requested by Listing Market
+        - H4: Halt Non-Compliance
+        - H9: Halt Filings Not Current
+        - H10: Halt SEC Trading Suspension
+        - H11: Halt Regulatory Concern
+        - O1: Operations Halt; Contact Market Operations
+        - LUDP: Volatility Trading Pause
+        - LUDS: Volatility Trading Pause – Straddle Condition
+        - MWC1: Market Wide Circuit Breaker Halt – Level 1
+        - MWC2: Market Wide Circuit Breaker Halt – Level 2
+        - MWC3: Market Wide Circuit Breaker Halt – Level 3
+        - MWC0: Market Wide Circuit Breaker Halt – Carry over from previous day
+        - IPO1: IPO Issue Not Yet Trading
+        - M1: Corporate Action
+        - M2: Quotation Not Available
+        - Space: Reason Not Available
+        - T3: News and Resumption Times
+        - T7: Single Security Trading Pause / Quotation Only Period
+        - R4: Qualifications Issues Reviewed/Resolved; Quotations/Trading to Resume
+        - R9: Filing Requirements Satisfied/Resolved; Quotations/Trading To Resume
+        - C3: Issuer News Not Forthcoming; Quotations/Trading To Resume
+        - C4: Qualifications Halt ended; Maintenance Requirements Met; Resume
+        - C9: Qualifications Halt Concluded; Filings Met; Quotes/Trades To Resume
+        - C11: Trade Halt Concluded By Other Regulatory Auth.; Quotes/Trades Resume
+        - MWCQ: Market Wide Circuit Breaker Resumption
+        - R1: New Issue Available
+        - R2: Issue Available
+        - IPOQ: IPO Security Released for Quotation (NASDAQ Securities Only)
+        - IPOE: IPO Security — Positioning Window Extension (NASDAQ Securities Only)
 
   - RegSHOAction:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - 0: No price test in place
-        variant: NoPriceTest
-      - 1: Reg SHO Short Sale Price Test Restriction in effect due to intra-day price drop in security
-        variant: IntradayPriceDropRestriction
-      - 2: Reg SHO Short Sale Price Test Restriction remains in effect
-        variant: RestrictionRemains
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - 0: No price test in place
+          variant: NoPriceTest
+        - 1: Reg SHO Short Sale Price Test Restriction in effect due to intra-day price drop in security
+          variant: IntradayPriceDropRestriction
+        - 2: Reg SHO Short Sale Price Test Restriction remains in effect
+          variant: RestrictionRemains
 
   - MPID:
-    type: string
-    length: 4
+      type: string
+      length: 4
 
   - PrimaryMarketMaker:
-    type: alpha
-    astype: bool
-    length: 1
-    enum:
-      - Y: Primary Market Maker
-        variant: true
-      - N: Non-primary Market Maker
-        variant: false
+      type: alpha
+      astype: bool
+      length: 1
+      enum:
+        - Y: Primary Market Maker
+          variant: true
+        - N: Non-primary Market Maker
+          variant: false
 
   - MarketMakerMode:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - N: Normal
-      - P: Passive
-      - S: Syndicate
-      - R: Presyndicate
-      - L: Penalty
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - N: Normal
+        - P: Passive
+        - S: Syndicate
+        - R: Presyndicate
+        - L: Penalty
 
   - MarketParticipantState:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - A: Active
-      - E: Excused/Withdrawn
-      - W: Withdrawn
-      - S: Suspended
-      - D: Deleted
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - A: Active
+        - E: Excused/Withdrawn
+        - W: Withdrawn
+        - S: Suspended
+        - D: Deleted
 
   - Level1:
-    type: u64
-    length: 8
+      type: u64
+      length: 8
 
   - Level2:
-    type: u64
-    length: 8
+      type: u64
+      length: 8
 
   - Level3:
-    type: u64
-    length: 8
+      type: u64
+      length: 8
 
   - BreachedLevel:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - 1: Level 1
-      - 2: Level 2
-      - 3: Level 3
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - 1: Level 1
+        - 2: Level 2
+        - 3: Level 3
 
   - IPOQuotationReleaseTime:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - IPOQuotationReleaseQualifier:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - A: Anticipated quotation release time
-        variant: Anticipated
-      - C: IPO Release canceled/postponed
-        variant: CanceledPostponed
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - A: Anticipated quotation release time
+          variant: Anticipated
+        - C: IPO Release canceled/postponed
+          variant: CanceledPostponed
 
   - IPOPrice:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - OrderRefNum:
-    type: u64
-    length: 8
+      type: u64
+      length: 8
 
   - BuySell:
-    type: alpha
-    astype: bool
-    length: 1
-    enum:
-      - B: Buy order
-        variant: true
-      - S: Sell order
-        variant: false
+      type: alpha
+      astype: bool
+      length: 1
+      enum:
+        - B: Buy order
+          variant: true
+        - S: Sell order
+          variant: false
 
   - Shares:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - Price:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - ExecutedShares:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - MatchNumber:
-    type: u64
-    length: 8
+      type: u64
+      length: 8
 
   - Printable:
-    type: alpha
-    astype: bool
-    length: 1
-    enum:
-      - Y: Printable
-        variant: true
-      - N: Nonprintable
-        variant: false
+      type: alpha
+      astype: bool
+      length: 1
+      enum:
+        - Y: Printable
+          variant: true
+        - N: Nonprintable
+          variant: false
 
   - ExecutionPrice:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - CanceledShares:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - OriginalOrderRefNum:
-    type: u64
-    length: 8
+      type: u64
+      length: 8
 
   - NewOrderRefNum:
-    type: u64
-    length: 8
+      type: u64
+      length: 8
 
   - CrossPrice:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - CrossType:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - O: NASDAQ Opening Cross
-        variant: OpeningCross
-      - C: NASDAQ Closing Cross
-        variant: ClosingCross
-      - H: Cross for IPO and halted/paused securities
-        variant: IPOAndHaltedPaused
-      - I: NASDAQ Cross Network Intraday Cross and Post-Close Cross
-        variant: NetworkCross
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - O: NASDAQ Opening Cross
+          variant: OpeningCross
+        - C: NASDAQ Closing Cross
+          variant: ClosingCross
+        - H: Cross for IPO and halted/paused securities
+          variant: IPOAndHaltedPaused
+        - I: NASDAQ Cross Network Intraday Cross and Post-Close Cross
+          variant: NetworkCross
 
   - PairedShares:
-    type: u64
-    length: 8
+      type: u64
+      length: 8
 
   - ImbalanceShares:
-    type: u64
-    length: 8
+      type: u64
+      length: 8
 
   - ImbalanceDirection:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - B: Buy imbalance
-      - S: Sell imbalance
-      - N: No imbalance
-      - O: Insufficient orders
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - B: Buy imbalance
+        - S: Sell imbalance
+        - N: No imbalance
+        - O: Insufficient orders
 
   - FarPrice:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - NearPrice:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - CurrentRefPrice:
-    type: u32
-    length: 4
+      type: u32
+      length: 4
 
   - PriceVariationIndicator:
-    type: char
-    astype: enum
-    length: 1
-    enum:
-      - L: Less than 1%
-        variant: Less1Pct
-      - 1: 1 to 1.99%
-        variant: OneToTwoPct
-      - 2: 2 to 2.99%
-        variant: TwoToThreePct
-      - 3: 3 to 3.99%
-        variant: ThreeToFourPct
-      - 4: 4 to 4.99%
-        variant: FourToFivePct
-      - 5: 5 to 5.99%
-        variant: FiveToSixPct
-      - 6: 6 to 6.99%
-        variant: SixToSevenPct
-      - 7: 7 to 7.99%
-        variant: SevenToEightPct
-      - 8: 8 to 8.99%
-        variant: EightToNinePct
-      - 9: 9 to 10%
-        variant: NineToTenPct
-      - A: 10 to 19.99%
-        variant: TenToTwentyPct
-      - B: 20 to 29.99%
-        variant: TwentyToThirtyPct
-      - C: 30% or greater
-        variant: MoreThanThirtyPct
-      - ' ': Cannot be calculated
-        variant: CannotCalculate
+      type: char
+      astype: enum
+      length: 1
+      enum:
+        - L: Less than 1%
+          variant: Less1Pct
+        - 1: 1 to 1.99%
+          variant: OneToTwoPct
+        - 2: 2 to 2.99%
+          variant: TwoToThreePct
+        - 3: 3 to 3.99%
+          variant: ThreeToFourPct
+        - 4: 4 to 4.99%
+          variant: FourToFivePct
+        - 5: 5 to 5.99%
+          variant: FiveToSixPct
+        - 6: 6 to 6.99%
+          variant: SixToSevenPct
+        - 7: 7 to 7.99%
+          variant: SevenToEightPct
+        - 8: 8 to 8.99%
+          variant: EightToNinePct
+        - 9: 9 to 10%
+          variant: NineToTenPct
+        - A: 10 to 19.99%
+          variant: TenToTwentyPct
+        - B: 20 to 29.99%
+          variant: TwentyToThirtyPct
+        - C: 30% or greater
+          variant: MoreThanThirtyPct
+        - ' ': Cannot be calculated
+          variant: CannotCalculate
 
   - InterestFlag:
-    type: alpha
-    astype: enum
-    length: 1
-    enum:
-      - B: RPI Orders available on buy side
-        variant: RPIBuy
-      - S: RPI Orders available on sell side
-        variant: RPISell
-      - A: RPI Orders available on both sides
-        variant: RPIBoth
-      - N: No RPI Orders available
-        variant: NoRPI
+      type: alpha
+      astype: enum
+      length: 1
+      enum:
+        - B: RPI Orders available on buy side
+          variant: RPIBuy
+        - S: RPI Orders available on sell side
+          variant: RPISell
+        - A: RPI Orders available on both sides
+          variant: RPIBoth
+        - N: No RPI Orders available
+          variant: NoRPI
 
 
 
 messages:
   - SystemEventMessage:
-    code: S
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - EventCode
+      code: S
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - EventCode
 
   - StockDirectory:
-    code: R
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - Stock
-      - MarketCategory
-      - FinancialStatusIndicator
-      - RoundLotSize
-      - RoundLotsOnly
-      - IssueClassification
-      - IssueSubType
-      - Authenticity
-      - ShortSaleThresholdIndicator
-      - IPOFlag
-      - LULDReferencePriceTier
-      - ETPFlag
-      - ETPLeverageFactor
-      - InverseIndicator
+      code: R
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - Stock
+        - MarketCategory
+        - FinancialStatusIndicator
+        - RoundLotSize
+        - RoundLotsOnly
+        - IssueClassification
+        - IssueSubType
+        - Authenticity
+        - ShortSaleThresholdIndicator
+        - IPOFlag
+        - LULDReferencePriceTier
+        - ETPFlag
+        - ETPLeverageFactor
+        - InverseIndicator
 
   - StockTradingAction:
-    code: H
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - Stock
-      - TradingState
-      - Reserved
-      - Reason
+      code: H
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - Stock
+        - TradingState
+        - Reserved
+        - Reason
 
   - RegSHORestriction:
-    code: Y
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - Stock
-      - RegSHOAction
+      code: Y
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - Stock
+        - RegSHOAction
 
   - MarketParticipantPosition:
-    code: L
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - MPID
-      - Stock
-      - PrimaryMarketMaker
-      - MarketMakerMode
-      - MarketParticipantState
+      code: L
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - MPID
+        - Stock
+        - PrimaryMarketMaker
+        - MarketMakerMode
+        - MarketParticipantState
 
   - MWCBDeclineLevel:
-    code: V
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - Level1
-      - Level2
-      - Level3
+      code: V
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - Level1
+        - Level2
+        - Level3
 
   - MWCBBreach:
-    code: W
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - BreachedLevel
+      code: W
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - BreachedLevel
 
   - IPOQuotingPeriodUpdate:
-    code: K
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - Stock
-      - IPOQuotationReleaseTime
-      - IPOQuotationReleaseQualifier
-      - IPOPrice
+      code: K
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - Stock
+        - IPOQuotationReleaseTime
+        - IPOQuotationReleaseQualifier
+        - IPOPrice
 
   - AddOrder:
-    code: A
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - OrderRefNum
-      - BuySell
-      - Shares
-      - Stock
-      - Price
+      code: A
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - OrderRefNum
+        - BuySell
+        - Shares
+        - Stock
+        - Price
 
   - AddOrderMPID:
-    code: F
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - OrderRefNum
-      - BuySell
-      - Shares
-      - Stock
-      - Price
-      - MPID
+      code: F
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - OrderRefNum
+        - BuySell
+        - Shares
+        - Stock
+        - Price
+        - MPID
 
   - OrderExecuted:
-    code: E
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - OrderRefNum
-      - ExecutedShares
-      - MatchNumber
+      code: E
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - OrderRefNum
+        - ExecutedShares
+        - MatchNumber
 
   - OrderExecutedWithPrice:
-    code: C
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - OrderRefNum
-      - ExecutedShares
-      - MatchNumber
-      - Printable
-      - ExecutionPrice
+      code: C
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - OrderRefNum
+        - ExecutedShares
+        - MatchNumber
+        - Printable
+        - ExecutionPrice
 
   - OrderCancel:
-    code: X
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - OrderRefNum
-      - CanceledShares
+      code: X
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - OrderRefNum
+        - CanceledShares
 
   - OrderDelete:
-    code: D
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - OrderRefNum
+      code: D
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - OrderRefNum
 
   - OrderReplace:
-    code: U
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - OriginalOrderRefNum
-      - NewOrderRefNum
-      - Shares
-      - Price
+      code: U
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - OriginalOrderRefNum
+        - NewOrderRefNum
+        - Shares
+        - Price
 
   - Trade:
-    code: P
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - OrderRefNum
-      - BuySell
-      - Shares
-      - Stock
-      - Price
-      - MatchNumber
+      code: P
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - OrderRefNum
+        - BuySell
+        - Shares
+        - Stock
+        - Price
+        - MatchNumber
 
   - CrossTrade:
-    code: Q
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - Shares
-      - Stock
-      - MatchNumber
-      - CrossType
+      code: Q
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - Shares
+        - Stock
+        - MatchNumber
+        - CrossType
 
   - BrokenTrade:
-    code: B
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - MatchNumber
+      code: B
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - MatchNumber
 
   - NOII:
-    code: I
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - PairedShares
-      - ImbalanceShares
-      - ImbalanceDirection
-      - Stock
-      - FarPrice
-      - NearPrice
-      - CurrentRefPrice
-      - CrossType
-      - PriceVariationIndicator
+      code: I
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - PairedShares
+        - ImbalanceShares
+        - ImbalanceDirection
+        - Stock
+        - FarPrice
+        - NearPrice
+        - CurrentRefPrice
+        - CrossType
+        - PriceVariationIndicator
 
   - RPII:
-    code: N
-    fields:
-      - StockLocate
-      - TrackingNumber
-      - Timestamp
-      - Stock
-      - InterestFlag
+      code: N
+      fields:
+        - StockLocate
+        - TrackingNumber
+        - Timestamp
+        - Stock
+        - InterestFlag
