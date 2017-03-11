@@ -4,7 +4,7 @@
 #
 # Reference: http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NQTVITCHspecification.pdf
 #
-
+---
 itch: 5.0
 
 fields:
@@ -294,7 +294,6 @@ fields:
         - IPO1: IPO Issue Not Yet Trading
         - M1: Corporate Action
         - M2: Quotation Not Available
-        - Space: Reason Not Available
         - T3: News and Resumption Times
         - T7: Single Security Trading Pause / Quotation Only Period
         - R4: Qualifications Issues Reviewed/Resolved; Quotations/Trading to Resume
@@ -308,6 +307,7 @@ fields:
         - R2: Issue Available
         - IPOQ: IPO Security Released for Quotation (NASDAQ Securities Only)
         - IPOE: IPO Security — Positioning Window Extension (NASDAQ Securities Only)
+        - ' ': Reason Not Available
 
   - RegSHOAction:
       type: alpha
@@ -501,7 +501,7 @@ fields:
       length: 4
 
   - PriceVariationIndicator:
-      type: char
+      type: alpha
       astype: enum
       length: 1
       enum:
@@ -523,7 +523,7 @@ fields:
           variant: SevenToEightPct
         - 8: 8 to 8.99%
           variant: EightToNinePct
-        - 9: 9 to 10%
+        - 9: 9 to 9.99%
           variant: NineToTenPct
         - A: 10 to 19.99%
           variant: TenToTwentyPct
@@ -547,7 +547,6 @@ fields:
           variant: RPIBoth
         - N: No RPI Orders available
           variant: NoRPI
-
 
 
 messages:
@@ -737,6 +736,7 @@ messages:
         - Timestamp
         - Shares
         - Stock
+        - CrossPrice
         - MatchNumber
         - CrossType
 
