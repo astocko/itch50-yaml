@@ -4,7 +4,7 @@
 #
 # Reference: http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NQTVITCHspecification.pdf
 #
-
+---
 itch: 5.0
 
 fields:
@@ -547,7 +547,6 @@ fields:
           variant: RPIBoth
         - N: No RPI Orders available
           variant: NoRPI
-
 
 
 messages:
